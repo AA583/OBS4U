@@ -23,103 +23,82 @@
 <body>
   <!-- Header -->
   <header>
-    <!-- First nav bar -->
-    <nav class="bg-dark border-bottom border-body py-0" data-bs-theme="light">
-      <div class="container-md px-4">
-        <div class="d-flex justify-content-between align-items-center d-block">
-          <ul class="navbar-nav flex-row gap-4 py-2">
-            <li class="nav-item">
-              <span class="text-white">
-                <small>
-                  <i class="bi bi-telephone-fill"></i>
-                  <a class="d-inline ps-1" href="tel:0123456789">+84123456789</a>
-                </small>
-              </span>
-            </li>
-            <li class="nav-item d-none d-sm-block">
-              <span class="text-white">
-                <small>
-                  <i class="bi bi-envelope-fill"></i>
-                  <a class="d-inline ps-1" href="mailto:abc@gmail.com">abc@gmail.com</a>
-                </small>
-              </span>
-            </li>
-          </ul>
-          <a href="./login.html" id="notLoggedIn" class="btn btn-outline-light d-flex p-0 px-2 py-1">
-            <i class="bi bi-person-fill"></i>
-            <div><small class="ps-1">Log in</small></div>
-          </a>
-          <div id="loggedIn" class="dropdown">
-            <button class="btn btn-outline-light dropdown-toggle p-0 px-2 py-1" type="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <i class="bi bi-person-fill"></i>
-              <span id="username" class="d-none d-sm-inline"></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="./demo-content.html">Profile</a></li>
-              <li id="logOut"><a class="dropdown-item" href="../index.html">Log out</a></li>
-            </ul>
-          </div>
+    <!-- nav 1 -->
+    <nav class="bg-dark border-bottom border-body py-0">
+        <div class="container-md px-4">
+            <div class="d-flex justify-content-between align-items-center d-block">
+                <ul class="navbar-nav flex-row gap-4 py-2">
+                    <li class="nav-item">
+                        <span class="text-white">
+                            <small>
+                                <i class="bi bi-telephone-fill"></i>
+                                <a class="d-inline ps-1" href="tel:0365789632">0365789632</a>
+                            </small>
+                        </span>
+                    </li>
+                    <li class="nav-item d-none d-sm-block">
+                        <span class="text-white">
+                            <small>
+                                <i class="bi bi-envelope-fill"></i>
+                                <a class="d-inline ps-1"
+                                    href="mailto:ourbookshelf4u@gmail.com">ourbookshelf4u@gmail.com</a>
+                            </small>
+                        </span>
+                    </li>
+                </ul>
+                <a href="" class="btn btn-outline-light d-flex p-0 px-2 py-1">
+                    <i class="bi bi-person-fill"></i>
+                    <div><small class="ps-1">Log in</small></div>
+                </a>
+            </div>
         </div>
-      </div>
     </nav>
-
     <!-- Logo -->
-    <div class="text-center">
-      <a href="../index.html">
-        <img src="../assets/images/logo.png" alt="logo The Bookshelf Hanoi" class="img-fluid">
-      </a>
-    </div>
-
-    <!-- Second nav bar -->
-    <nav class="navbar navbar-expand-md border-top p-0">
-      <div class="container-md">
-        <button class="navbar-toggler focus-ring focus-ring-light my-1" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-md-0 pb-1 pb-md-0 gap-lg-4">
-            <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
-              <a class="nav-link active active-link opacity-75" href="../index.html">HOME</a>
-            </li>
-            <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
-              <a class="nav-link" href="./ourshelf.html">OUR SHELF</a>
-            </li>
-            <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
-              <a class="nav-link" href="../index.html#newInSection">NEW IN</a>
-            </li>
-            <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
-              <a class="nav-link" href="../index.html#bestSellerSection">BEST SELLER</a>
-            </li>
-            <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
-              <a class="nav-link" href="../index.html#offerSection">OFFER</a>
-            </li>
-          </ul>
-        </div>
-        <a href="./cart.html" class="btn btn-outline-dark my-1 me-2" type="button">
-          <i class="bi-cart-fill me-1"></i>
-          Cart
-          <span id="cartCount" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+    <div style="text-align: center;">
+        <a href="index.html">
+            <img src="./assets/images/logo.png" alt="Our Bookshelf ForYou" class="img-fluid">
         </a>
-      </div>
-    </nav>
-    <!-- Breadcrumb -->
-    <div class="bg-white">
-      <div class="container-md py-3">
-        <nav aria-label="breadcrumb" class="ms-2">
-          <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="../index.html">HOME</a></li>
-            <li class="breadcrumb-item active text-primary text-opacity-75" aria-current="page">Our shelf</li>
-          </ol>
-        </nav>
-      </div>
     </div>
-  </header>
+    <!-- nav 2 -->
+    <nav class="navbar navbar-expand-md border-top p-0">
+        <div class="container-md">
+            <button class="navbar-toggler focus-ring focus-ring-light my-1" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-md-0 pb-1 pb-md-0 gap-lg-4">
+                    <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
+                        <a class="nav-link active active-link opacity-75" href="./index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
+                        <a class="nav-link" href="">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
+                        <a class="nav-link" href="">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
+                        <a class="nav-link" href="">Tác giả</a>
+                    </li>
+                    <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
+                        <a class="nav-link" href="">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn btn-outline-dark my-1 me-2" type="button">
+                <a href="">
+                    <i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <span id="cartCount" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                </a>
+            </button>
+        </div>
+    </nav>
+</header>
   <!-- Search bar -->
-  <div class="container-md d-flex w-25 mt-2 flex-row-reverse justify-content-end me-5 ">
-    <input type="text" id="searchInput" style="height: 37.64px;" class="form-control me-5 mt-1  "
+  <div class="container-md d-flex w-50 mt-2 flex-row-reverse justify-content-center  ">
+    <input type="text" id="searchInput" style="height: 37.64px;" class="form-control mt-1  "
       placeholder="Search for books...">
     <i id="searchIcon" class="bi bi-search mt-1 ms-0 me-1 bi-cart-fill btn btn-primary  "></i>
     <div class="me-2"> </div>
@@ -1083,11 +1062,11 @@
         });
       }
 
-      // searchInput.addEventListener('input', filterBooks);
+      searchInput.addEventListener('input', filterBooks);
 
-      searchIcon.addEventListener('click', function () {
-        filterBooks();
-      });
+      //searchIcon.addEventListener('click', function () {
+      //  filterBooks();
+      //});
 
       // Reset to initial state when search input is cleared
       searchInput.addEventListener('input', function (event) {
