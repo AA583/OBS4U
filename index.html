@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
-    <title>OBS4U</title>
+    <title>OurBookShelf4U</title>
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.min.css">
 
     <!-- Bootstrap icon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap_icons/bootstrap-icons.min.css">
 
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="./assets/css/owl_carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl_carousel/owl.theme.default.min.css">
 
     <!-- Custom css -->
     <link rel="stylesheet" href="./css/style.css">
@@ -21,8 +24,34 @@
 
 <body>
     <header>
-        <nav>
-            <h1>This is nav 1</h1>
+        <!-- nav 1 -->
+        <nav class="bg-dark border-bottom border-body py-0" >
+            <div class="container-md px-4">
+                <div class="d-flex justify-content-between align-items-center d-block">
+                    <ul class="navbar-nav flex-row gap-4 py-2">
+                        <li class="nav-item">
+                            <span class="text-white">
+                                <small>
+                                    <i class="bi bi-telephone-fill"></i>
+                                    <a class="d-inline ps-1" href="tel:0365789632">0365789632</a>
+                                </small>
+                            </span>
+                        </li>
+                        <li class="nav-item d-none d-sm-block">
+                            <span class="text-white">
+                                <small>
+                                    <i class="bi bi-envelope-fill"></i>
+                                    <a class="d-inline ps-1" href="mailto:ourbookshelf4u@gmail.com">ourbookshelf4u@gmail.com</a>
+                                </small>
+                            </span>
+                        </li>
+                    </ul>
+                    <a href="" class="btn btn-outline-light d-flex p-0 px-2 py-1">
+                        <i class="bi bi-person-fill"></i>
+                        <div><small class="ps-1">Log in</small></div>
+                    </a>
+                </div>
+            </div>
         </nav>
 
         <div style="text-align: center;">
@@ -68,13 +97,13 @@
             <!-- Slideshow -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./assets/images/carousel/slider_1.jpg" class="d-block w-100" alt="...">
+                    <img src="./assets/images/carousel/book1.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./assets/images/carousel/slider_2.jpg" class="d-block w-100" alt="...">
+                    <img src="./assets/images/carousel/book2.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./assets/images/carousel/slider_3.jpg" class="d-block w-100" alt="...">
+                    <img src="./assets/images/carousel/book3.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
             <!-- Tạo left và right control icons -->
@@ -91,20 +120,278 @@
         </div>
 
         <!-- Sách mới về -->
-        <div id="sachmoi" class="container-md">
-            <div class="text-center my-5">
-                <h1 class="header-font">Sách mới</h1>
+        <div id="Sachmoi" class="container-md">
+            <!-- Tiêu đều -->
+            <div class="text-center">
+                <h1 class="mt-3 header-font">Sách mới</h1>
             </div>
-
-            <div id="dssachmoi" class="mb-5 mx-auto owl-carousel ">
-                <div class="section-color">
-
+            <!-- Danh sách sách mới -->
+            <div id="dssachmoi" class="owl-carousel owl-theme">
+                <div id="0" class="itemsachmoi">
+                    <div class="py-2">
+                        <div class="card mx-4 d-block hvr-glow">
+                            <a href="">
+                                <!-- Book image -->
+                                 <img src="./assets/images/books/Sách kỹ năng/Tu_duy_mo.jpg" height="300" 
+                                 class="card-img-top object-fit-scale bg-secondary-subtle border-bottom mb-2"
+                                 alt="Tư duy mở">
+                                 <div class="card-body ms-1">
+                                    <div class="text-start">
+                                        <!-- Book name -->
+                                         <p class="d-block fw-bold mb-2">Tư duy mở</p>
+                                        <!-- Book review -->
+                                         <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                         </div>
+                                        <!-- Book price -->
+                                        280.000₫
+                                    </div>
+                                 </div>
+                            </a>
+                            <div class="card-footer py-4 pt-0 border-top-0 bg-transparent d-flex">
+                                <div class="me-3">
+                                    <a class="add-button btn btn-outline-dark mt-auto w-100" data-bs-toggle="modal"
+                                        data-bs-target="#addBookModal" href="#">Thêm vào giỏ</a>
+                                    <input type="text" value="4" class="d-none">
+                                </div>
+                                <div class="text-start">
+                                    <a href="" class="add-button btn btn-dark mt-auto w-100">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-
+                <div id="1" class="itemsachmoi">
+                    <div class="py-2">
+                        <div class="card mx-4 d-block hvr-glow">
+                            <a href="">
+                                <!-- Book image -->
+                                 <img src="./assets/images/books/Sách kỹ năng/Tu_duy_mo.jpg" height="300" 
+                                 class="card-img-top object-fit-scale bg-secondary-subtle border-bottom mb-2"
+                                 alt="Tư duy mở">
+                                 <div class="card-body ms-1">
+                                    <div class="text-start">
+                                        <!-- Book name -->
+                                         <p class="d-block fw-bold mb-2">Tư duy mở</p>
+                                        <!-- Book review -->
+                                         <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                         </div>
+                                        <!-- Book price -->
+                                        280.000₫
+                                    </div>
+                                 </div>
+                            </a>
+                            <div class="card-footer py-4 pt-0 border-top-0 bg-transparent d-flex">
+                                <div class="me-3">
+                                    <a class="add-button btn btn-outline-dark mt-auto w-100" data-bs-toggle="modal"
+                                        data-bs-target="#addBookModal" href="#">Thêm vào giỏ</a>
+                                    <input type="text" value="4" class="d-none">
+                                </div>
+                                <div class="text-start">
+                                    <a href="" class="add-button btn btn-dark mt-auto w-100">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-
+                <div id="2" class="itemsachmoi">
+                    <div class="py-2">
+                        <div class="card mx-4 d-block hvr-glow">
+                            <a href="">
+                                <!-- Book image -->
+                                 <img src="./assets/images/books/Sách kỹ năng/Tu_duy_mo.jpg" height="300" 
+                                 class="card-img-top object-fit-scale bg-secondary-subtle border-bottom mb-2"
+                                 alt="Tư duy mở">
+                                 <div class="card-body ms-1">
+                                    <div class="text-start">
+                                        <!-- Book name -->
+                                         <p class="d-block fw-bold mb-2">Tư duy mở</p>
+                                        <!-- Book review -->
+                                         <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                         </div>
+                                        <!-- Book price -->
+                                        280.000₫
+                                    </div>
+                                 </div>
+                            </a>
+                            <div class="card-footer py-4 pt-0 border-top-0 bg-transparent d-flex">
+                                <div class="me-3">
+                                    <a class="add-button btn btn-outline-dark mt-auto w-100" data-bs-toggle="modal"
+                                        data-bs-target="#addBookModal" href="#">Thêm vào giỏ</a>
+                                    <input type="text" value="4" class="d-none">
+                                </div>
+                                <div class="text-start">
+                                    <a href="" class="add-button btn btn-dark mt-auto w-100">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="3" class="itemsachmoi">
+                    <div class="py-2">
+                        <div class="card mx-4 d-block hvr-glow">
+                            <a href="">
+                                <!-- Book image -->
+                                 <img src="./assets/images/books/Sách kỹ năng/Tu_duy_mo.jpg" height="300" 
+                                 class="card-img-top object-fit-scale bg-secondary-subtle border-bottom mb-2"
+                                 alt="Tư duy mở">
+                                 <div class="card-body ms-1">
+                                    <div class="text-start">
+                                        <!-- Book name -->
+                                         <p class="d-block fw-bold mb-2">Tư duy mở</p>
+                                        <!-- Book review -->
+                                         <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                         </div>
+                                        <!-- Book price -->
+                                        280.000₫
+                                    </div>
+                                 </div>
+                            </a>
+                            <div class="card-footer py-4 pt-0 border-top-0 bg-transparent d-flex">
+                                <div class="me-3">
+                                    <a class="add-button btn btn-outline-dark mt-auto w-100" data-bs-toggle="modal"
+                                        data-bs-target="#addBookModal" href="#">Thêm vào giỏ</a>
+                                    <input type="text" value="4" class="d-none">
+                                </div>
+                                <div class="text-start">
+                                    <a href="" class="add-button btn btn-dark mt-auto w-100">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="4" class="itemsachmoi">
+                    <div class="py-2">
+                        <div class="card mx-4 d-block hvr-glow">
+                            <a href="">
+                                <!-- Book image -->
+                                 <img src="./assets/images/books/Sách kỹ năng/Tu_duy_mo.jpg" height="300" 
+                                 class="card-img-top object-fit-scale bg-secondary-subtle border-bottom mb-2"
+                                 alt="Tư duy mở">
+                                 <div class="card-body ms-1">
+                                    <div class="text-start">
+                                        <!-- Book name -->
+                                         <p class="d-block fw-bold mb-2">Tư duy mở</p>
+                                        <!-- Book review -->
+                                         <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                         </div>
+                                        <!-- Book price -->
+                                        280.000₫
+                                    </div>
+                                 </div>
+                            </a>
+                            <div class="card-footer py-4 pt-0 border-top-0 bg-transparent d-flex">
+                                <div class="me-3">
+                                    <a class="add-button btn btn-outline-dark mt-auto w-100" data-bs-toggle="modal"
+                                        data-bs-target="#addBookModal" href="#">Thêm vào giỏ</a>
+                                    <input type="text" value="4" class="d-none">
+                                </div>
+                                <div class="text-start">
+                                    <a href="" class="add-button btn btn-dark mt-auto w-100">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="5" class="itemsachmoi">
+                    <div class="py-2">
+                        <div class="card mx-4 d-block hvr-glow">
+                            <a href="">
+                                <!-- Book image -->
+                                 <img src="./assets/images/books/Sách kỹ năng/Tu_duy_mo.jpg" height="300" 
+                                 class="card-img-top object-fit-scale bg-secondary-subtle border-bottom mb-2"
+                                 alt="Tư duy mở">
+                                 <div class="card-body ms-1">
+                                    <div class="text-start">
+                                        <!-- Book name -->
+                                         <p class="d-block fw-bold mb-2">Tư duy mở</p>
+                                        <!-- Book review -->
+                                         <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                         </div>
+                                        <!-- Book price -->
+                                        280.000₫
+                                    </div>
+                                 </div>
+                            </a>
+                            <div class="card-footer py-4 pt-0 border-top-0 bg-transparent d-flex">
+                                <div class="me-3">
+                                    <a class="add-button btn btn-outline-dark mt-auto w-100" data-bs-toggle="modal"
+                                        data-bs-target="#addBookModal" href="#">Thêm vào giỏ</a>
+                                    <input type="text" value="4" class="d-none">
+                                </div>
+                                <div class="text-start">
+                                    <a href="" class="add-button btn btn-dark mt-auto w-100">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="6" class="itemsachmoi">
+                    <div class="py-2">
+                        <div class="card mx-4 d-block hvr-glow">
+                            <a href="">
+                                <!-- Book image -->
+                                 <img src="./assets/images/books/Sách kỹ năng/Tu_duy_mo.jpg" height="300" 
+                                 class="card-img-top object-fit-scale bg-secondary-subtle border-bottom mb-2"
+                                 alt="Tư duy mở">
+                                 <div class="card-body ms-1">
+                                    <div class="text-start">
+                                        <!-- Book name -->
+                                         <p class="d-block fw-bold mb-2">Tư duy mở</p>
+                                        <!-- Book review -->
+                                         <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                         </div>
+                                        <!-- Book price -->
+                                        280.000₫
+                                    </div>
+                                 </div>
+                            </a>
+                            <div class="card-footer py-4 pt-0 border-top-0 bg-transparent d-flex">
+                                <div class="me-3">
+                                    <a class="add-button btn btn-outline-dark mt-auto w-100" data-bs-toggle="modal"
+                                        data-bs-target="#addBookModal" href="#">Thêm vào giỏ</a>
+                                    <input type="text" value="4" class="d-none">
+                                </div>
+                                <div class="text-start">
+                                    <a href="" class="add-button btn btn-dark mt-auto w-100">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -117,8 +404,8 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <figure class="p-3 me-lg-5 bg-secondary-subtle rounded-2 d-flex justify-content-center">
-                                    <img src="./assets/images/books/harry-potter-and-the-prisoner-of-azkaban.jpg"
-                                        alt="book" class="img-fluid rounded-1">
+                                    <img src="./assets/images/books/Sách tâm lý học/Dam_bi_ghet.jpg" alt="book"
+                                        class="img-fluid rounded-1">
                                 </figure>
                             </div>
                             <div class="col-lg-6">
@@ -127,8 +414,8 @@
                                         <div class="border-top border-3 border-black w-25"></div>
                                     </h1>
                                     <div class="">
-                                        <div class="py-3 text-secondary">By J.K.Rowling</div>
-                                        <h3 class="header-font pb-3">Harry Potter and the Prisoner of Azkaban</h3>
+                                        <div class="py-3 text-secondary">By Kishimi Ichiro & Koga Fumitake</div>
+                                        <h3 class="pb-3">Dám bị ghét</h3>
                                         <p class="py-3">When Harry gets to
                                             Hogwarts, the atmosphere is tense. There's an escaped mass murderer on the
                                             loose, and the sinister
@@ -149,25 +436,26 @@
             </div>
         </div>
 
-        <!-- Sản phẩm nổi bật -->
+        <!-- Sách nổi bật -->
         <div id="sanphamnoibat" class="container-md">
+            <!-- Tiêu đề -->
             <div class="text-center my-5">
                 <h1 class="header-font">Sản phẩm nổi bật</h1>
             </div>
-
+            <!-- Danh sách sách nổi bật -->
             <div class="container mb-5 mx-4">
                 <div class="row gx-5 row-cols-xxl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1">
                     <div id="12" class="spnb">
                         <div class="col mb-5">
                             <div class="card d-block hvr-glow">
                                 <a href="#">
-                                    <img src="./assets/images/books/the-catcher-in-the-rye.jpg" height="300px"
+                                    <img src="./assets/images/books/Sách kỹ năng/Tu_duy_nguoc.jpg" height="300px"
                                         class="card-img-top object-fit-scale bg-secondary-subtle border-bottom py-4"
                                         alt="The Catcher in the Rye image">
                                     <div class="card-body ms-1">
                                         <div class="text-start">
                                             <!-- Tên sách -->
-                                            <p class="fw-bold mb-2">The Catcher in the eye</p>
+                                            <p class="fw-bold mb-2">Tư duy ngược</p>
                                             <!-- Đánh giá -->
                                             <div class="d-flex justify-content-start small text-warning mb-2">
                                                 <div class="bi-star-fill"></div>
@@ -176,8 +464,8 @@
                                                 <div class="bi-star-fill"></div>
                                                 <div class="bi-star-fill"></div>
                                             </div>
-                                            180.000₫
-                                            <span class="text-muted text-decoration-line-through">220.000₫</span>
+                                            65.500₫
+                                            <span class="text-muted text-decoration-line-through">139.000₫</span>
                                         </div>
                                     </div>
                                 </a>
@@ -194,18 +482,18 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div id="13" class="spnb">
                         <div class="col mb-5">
                             <div class="card d-block hvr-glow">
                                 <a href="#">
-                                    <img src="./assets/images/books/the-book-thief.jpg" height="300px"
+                                    <img src="./assets/images/books/Sách kỹ năng/Atomic_Habits.jpg" height="300px"
                                         class="card-img-top object-fit-scale bg-secondary-subtle border-bottom py-4"
                                         alt="The Catcher in the Rye image">
                                     <div class="card-body ms-1">
                                         <div class="text-start">
                                             <!-- Tên sách -->
-                                            <p class="fw-bold mb-2">The Catcher in the eye</p>
+                                            <p class="fw-bold mb-2">Atomic Habits - Thay Đổi Tí Hon Hiệu Quả Bất Ngờ</p>
                                             <!-- Đánh giá -->
                                             <div class="d-flex justify-content-start small text-warning mb-2">
                                                 <div class="bi-star-fill"></div>
@@ -214,8 +502,8 @@
                                                 <div class="bi-star-fill"></div>
                                                 <div class="bi-star-fill"></div>
                                             </div>
-                                            180.000₫
-                                            <span class="text-muted text-decoration-line-through">220.000₫</span>
+                                            141.000₫
+                                            <span class="text-muted text-decoration-line-through">189.000₫</span>
                                         </div>
                                     </div>
                                 </a>
@@ -237,13 +525,14 @@
                         <div class="col mb-5">
                             <div class="card d-block hvr-glow">
                                 <a href="#">
-                                    <img src="./assets/images/books/the-catcher-in-the-rye.jpg" height="300px"
+                                    <img src="./assets/images/books/Sách tiểu sử hồi ký/CR7_hanh_trinh_len_dinh_the_gioi.jpg"
+                                        height="300px"
                                         class="card-img-top object-fit-scale bg-secondary-subtle border-bottom py-4"
                                         alt="The Catcher in the Rye image">
                                     <div class="card-body ms-1">
                                         <div class="text-start">
                                             <!-- Tên sách -->
-                                            <p class="fw-bold mb-2">The Catcher in the eye</p>
+                                            <p class="fw-bold mb-2">CR7 - Hành trình lên đỉnh thế giới</p>
                                             <!-- Đánh giá -->
                                             <div class="d-flex justify-content-start small text-warning mb-2">
                                                 <div class="bi-star-fill"></div>
@@ -275,13 +564,14 @@
                         <div class="col mb-5">
                             <div class="card d-block hvr-glow">
                                 <a href="#">
-                                    <img src="./assets/images/books/the-catcher-in-the-rye.jpg" height="300px"
+                                    <img src="./assets/images/books/Sách tâm lý học/doc-vi-tam-ly-dan-ong.jpg"
+                                        height="300px"
                                         class="card-img-top object-fit-scale bg-secondary-subtle border-bottom py-4"
                                         alt="The Catcher in the Rye image">
                                     <div class="card-body ms-1">
                                         <div class="text-start">
                                             <!-- Tên sách -->
-                                            <p class="fw-bold mb-2">The Catcher in the eye</p>
+                                            <p class="fw-bold mb-2">Đọc vị tâm lý đàn ông</p>
                                             <!-- Đánh giá -->
                                             <div class="d-flex justify-content-start small text-warning mb-2">
                                                 <div class="bi-star-fill"></div>
@@ -313,13 +603,14 @@
                         <div class="col mb-5">
                             <div class="card d-block hvr-glow">
                                 <a href="#">
-                                    <img src="./assets/images/books/the-catcher-in-the-rye.jpg" height="300px"
+                                    <img src="./assets/images/books/Sách văn học/dam_tre_o_dai_duong_den.jpg"
+                                        height="300px"
                                         class="card-img-top object-fit-scale bg-secondary-subtle border-bottom py-4"
                                         alt="The Catcher in the Rye image">
                                     <div class="card-body ms-1">
                                         <div class="text-start">
                                             <!-- Tên sách -->
-                                            <p class="fw-bold mb-2">The Catcher in the eye</p>
+                                            <p class="fw-bold mb-2">Đám trẻ ở đại dương đen</p>
                                             <!-- Đánh giá -->
                                             <div class="d-flex justify-content-start small text-warning mb-2">
                                                 <div class="bi-star-fill"></div>
@@ -351,13 +642,14 @@
                         <div class="col mb-5">
                             <div class="card d-block hvr-glow">
                                 <a href="#">
-                                    <img src="./assets/images/books/the-catcher-in-the-rye.jpg" height="300px"
+                                    <img src="./assets/images/books/Sách tâm lý học/Tam_ly_hoc_ve_tien.jpg"
+                                        height="300px"
                                         class="card-img-top object-fit-scale bg-secondary-subtle border-bottom py-4"
                                         alt="The Catcher in the Rye image">
                                     <div class="card-body ms-1">
                                         <div class="text-start">
                                             <!-- Tên sách -->
-                                            <p class="fw-bold mb-2">The Catcher in the eye</p>
+                                            <p class="fw-bold mb-2">Tâm lý học về tiền</p>
                                             <!-- Đánh giá -->
                                             <div class="d-flex justify-content-start small text-warning mb-2">
                                                 <div class="bi-star-fill"></div>
@@ -389,13 +681,14 @@
                         <div class="col mb-5">
                             <div class="card d-block hvr-glow">
                                 <a href="#">
-                                    <img src="./assets/images/books/the-catcher-in-the-rye.jpg" height="300px"
+                                    <img src="./assets/images/books/Sách kỹ năng/Yeu_nhung_dieu_khong_hoan_hao.jpg"
+                                        height="300px"
                                         class="card-img-top object-fit-scale bg-secondary-subtle border-bottom py-4"
                                         alt="The Catcher in the Rye image">
                                     <div class="card-body ms-1">
                                         <div class="text-start">
                                             <!-- Tên sách -->
-                                            <p class="fw-bold mb-2">The Catcher in the eye</p>
+                                            <p class="fw-bold mb-2">Yêu những điều không hoàn hảo</p>
                                             <!-- Đánh giá -->
                                             <div class="d-flex justify-content-start small text-warning mb-2">
                                                 <div class="bi-star-fill"></div>
@@ -427,13 +720,13 @@
                         <div class="col mb-5">
                             <div class="card d-block hvr-glow">
                                 <a href="#">
-                                    <img src="./assets/images/books/the-catcher-in-the-rye.jpg" height="300px"
+                                    <img src="./assets/images/books/Sách tâm lý học/Dam_bi_ghet.jpg" height="300px"
                                         class="card-img-top object-fit-scale bg-secondary-subtle border-bottom py-4"
                                         alt="The Catcher in the Rye image">
                                     <div class="card-body ms-1">
                                         <div class="text-start">
                                             <!-- Tên sách -->
-                                            <p class="fw-bold mb-2">The Catcher in the eye</p>
+                                            <p class="fw-bold mb-2">Dám bị ghét</p>
                                             <!-- Đánh giá -->
                                             <div class="d-flex justify-content-start small text-warning mb-2">
                                                 <div class="bi-star-fill"></div>
@@ -470,13 +763,24 @@
         <h1>This is footer</h1>
     </footer>
 
+
+
+
+
     <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- jquery -->
-    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> -->
-    <!-- Boostrap Carousel -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/bootstrap/popper.min.js"></script>
+    <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="./assets/js/jquery/jquery.min.js"></script>
+    
+    <!-- Owl Carousel -->
+    <script src="./assets/js/owl_carousel/owl.carousel.min.js"></script>
+
+    <!-- Owl Carousel config -->
+    <script src="./js/owl-carousel-config.js"></script>
     <!-- Custom js -->
+
 </body>
 
 

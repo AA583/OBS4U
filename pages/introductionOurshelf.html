@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+  <title>Our shelf</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
+
+  <!-- Bootstrap icon -->
+  <link rel="stylesheet" href="../assets/css/bootstrap_icons/bootstrap-icons.min.css">
+
+  <!-- Hover.css -->
+  <link rel="stylesheet" href="../assets/css/hover_css/hover-min.css">
+
+  <!-- Custom css -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <!-- First nav bar -->
+    <nav class="bg-dark border-bottom border-body py-0" data-bs-theme="light">
+      <div class="container-md px-4">
+        <div class="d-flex justify-content-between align-items-center d-block">
+          <ul class="navbar-nav flex-row gap-4 py-2">
+            <li class="nav-item">
+              <span class="text-white">
+                <small>
+                  <i class="bi bi-telephone-fill"></i>
+                  <a class="d-inline ps-1" href="tel:0123456789">+84123456789</a>
+                </small>
+              </span>
+            </li>
+            <li class="nav-item d-none d-sm-block">
+              <span class="text-white">
+                <small>
+                  <i class="bi bi-envelope-fill"></i>
+                  <a class="d-inline ps-1" href="mailto:abc@gmail.com">abc@gmail.com</a>
+                </small>
+              </span>
+            </li>
+          </ul>
+          <a href="./login.html" id="notLoggedIn" class="btn btn-outline-light d-flex p-0 px-2 py-1">
+            <i class="bi bi-person-fill"></i>
+            <div><small class="ps-1">Log in</small></div>
+          </a>
+          <div id="loggedIn" class="dropdown">
+            <button class="btn btn-outline-light dropdown-toggle p-0 px-2 py-1" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="bi bi-person-fill"></i>
+              <span id="username" class="d-none d-sm-inline"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./demo-content.html">Profile</a></li>
+              <li id="logOut"><a class="dropdown-item" href="../index.html">Log out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Logo -->
+    <div class="text-center">
+      <a href="../index.html">
+        <img src="../assets/images/logo.png" alt="logo The Bookshelf Hanoi" class="img-fluid">
+      </a>
+    </div>
+
+    <!-- Second nav bar -->
+    <nav class="navbar navbar-expand-md border-top p-0">
+      <div class="container-md">
+        <button class="navbar-toggler focus-ring focus-ring-light my-1" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-md-0 pb-1 pb-md-0 gap-lg-4">
+            <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
+              <a class="nav-link active active-link opacity-75" href="../index.html">HOME</a>
+            </li>
+            <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
+              <a class="nav-link" href="./ourshelf.html">OUR SHELF</a>
+            </li>
+            <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
+              <a class="nav-link" href="../index.html#newInSection">NEW IN</a>
+            </li>
+            <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
+              <a class="nav-link" href="../index.html#bestSellerSection">BEST SELLER</a>
+            </li>
+            <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
+              <a class="nav-link" href="../index.html#offerSection">OFFER</a>
+            </li>
+          </ul>
+        </div>
+        <a href="./cart.html" class="btn btn-outline-dark my-1 me-2" type="button">
+          <i class="bi-cart-fill me-1"></i>
+          Cart
+          <span id="cartCount" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+        </a>
+      </div>
+    </nav>
+    <!-- Breadcrumb -->
+    <div class="bg-white">
+      <div class="container-md py-3">
+        <nav aria-label="breadcrumb" class="ms-2">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="../index.html">HOME</a></li>
+            <li class="breadcrumb-item active text-primary text-opacity-75" aria-current="page">Our shelf</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <!-- Fixed cart -->
+    <div id="fixedCart" class="me-md-5 mb-md-5 position-fixed bottom-0 end-0 z-3 d-none">
+      <div class="me-4 me-sm-5 mb-4 mb-sm-5 p-1 border border-2 rounded-circle">
+        <a href="./cart.html" class="btn btn-dark rounded-circle p-3 position-relative shadow-lg">
+          <i class="bi-cart-fill mx-1 fs-5"></i>
+          <span id="cartCount2"
+            class="position-absolute top-0 start-100 mt-1 me-2 translate-middle badge rounded-pill bg-danger">
+            1
+            <span class="visually-hidden">number of items in cart</span>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="container">
+        <div class="about-us">
+          <h1>Về Chúng Tôi</h1>
+          <img
+            src="https://thietkekhainguyen.com/wp-content/uploads/2018/10/sach-anh-du-lich7-788x445.jpg"
+            alt="Ảnh sách"
+            height="200"
+            style="float: right"
+          />
+          <p>
+            Nhà sách Ourbookself là một điểm đến lý tưởng cho những ai đam mê đọc
+            sách và tìm kiếm tri thức. Chúng tôi tự hào mang đến một không gian
+            đọc sách thoải mái, hiện đại và đầy cảm hứng, nơi bạn có thể khám phá
+            hàng ngàn đầu sách từ nhiều thể loại khác nhau.
+          </p>
+          <div class="mission">
+            <h2>Sứ Mệnh</h2>
+            <p>
+              Sứ mệnh của Ourbookself là khơi nguồn cảm hứng và đam mê đọc sách
+              trong cộng đồng. Chúng tôi tin rằng sách là nguồn tri thức vô tận,
+              là cầu nối giữa quá khứ và tương lai, giữa các nền văn hóa và các
+              thế hệ. Vì vậy, chúng tôi không ngừng nỗ lực để mang đến những cuốn
+              sách hay nhất, bổ ích nhất đến tay độc giả.
+            </p>
+          </div>
+          <div class="vision">
+            <h2>Tầm Nhìn</h2>
+            <p>
+              Chúng tôi phấn đấu trở thành nhà sách hàng đầu trong khu vực, nơi
+              khách hàng có thể tìm thấy mọi cuốn sách mà họ mong muốn, đồng thời
+              trở thành địa chỉ tin cậy cho những người yêu sách.
+            </p>
+          </div>
+          <div class="service">
+            <h2>Dịch vụ</h2>
+              <p>Giao hàng tận nơi: Với dịch vụ giao hàng nhanh chóng và tiện lợi,
+                bạn có thể nhận sách ngay tại nhà mình.</p> 
+              <p>Đặt hàng trực tuyến: Bạn có thể dễ dàng đặt mua sách qua website của chúng tôi với vài thao tác
+                đơn giản.</p> 
+                <p>Thẻ thành viên: Tham gia chương trình thẻ thành viên để
+                  nhận được nhiều ưu đãi và khuyến mãi đặc biệt.</p> 
+                  <p>Tư vấn và hỗ trợ: Đội
+                    ngũ nhân viên tận tâm và chuyên nghiệp của chúng tôi luôn sẵn sàng
+                    tư vấn và hỗ trợ bạn trong việc chọn sách.</p>
+            </p>
+          </div>
+          <div class="values">
+            <h2>Giá Trị Cốt Lõi</h2>
+            <p>
+              Chất lượng: Chúng tôi cam kết cung cấp những cuốn sách chất lượng
+              nhất.
+            </p>
+            <p>
+              Đa dạng: Đa dạng hóa các thể loại sách để đáp ứng nhu cầu của mọi
+              đối tượng khách hàng.
+            </p>
+            <p>
+              Khách hàng: Luôn đặt khách hàng lên hàng đầu, phục vụ tận tâm và chu
+              đáo.
+            </p>
+            <p>
+              Phát triển bền vững: Xây dựng một môi trường làm việc chuyên nghiệp,
+              bền vững cho nhân viên và cộng đồng.
+            </p>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer border-top py-5">
+    <div class="container-md">
+      <div class="row px-3 mx-2">
+        <div class="col-sm-6 col-lg-2">
+          <h6 class="fw-bold mb-4">
+            About us
+          </h6>
+          <ul class="list-unstyled text-secondary">
+            <li class="py-2">
+              <a class="text-decoration-underline link-body-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="../index.html"><small>Home</small></a>
+            </li>
+            <li class="py-2">
+              <a class="text-decoration-underline link-body-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./demo-content.html"><small>About us</small></a>
+            </li>
+            <li class="py-2">
+              <a class="text-decoration-underline link-body-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./ourshelf.html"><small>Our shelf</small></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <h6 class="fw-bold mb-4">
+            Instructions
+          </h6>
+          <ul class="list-unstyled text-secondary">
+            <li class="py-2">
+              <a class="text-decoration-underline link-body-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./demo-content.html"><small>How to buy</small></a>
+            </li>
+            <li class="py-2">
+              <a class="text-decoration-underline link-body-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./demo-content.html"><small>Check out</small></a>
+            </li>
+            <li class="py-2">
+              <a class="text-decoration-underline link-body-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./demo-content.html"><small>Shipping and return policy</small></a>
+            </li>
+            <li class="py-2">
+              <a class="text-decoration-underline link-body-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./demo-content.html"><small>Terms of service</small></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <h6 class="fw-bold mb-4">
+            Main menu
+          </h6>
+          <ul class="list-unstyled text-secondary">
+            <li class="py-2">
+              <a class="text-decoration-underline link-body-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./ourshelf.html"><small>OUR SHELF</small></a>
+            </li>
+            <li class="py-2">
+              <a class="text-decoration-underline link-body-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="../index.html#newInSection"><small>NEW IN</small></a>
+            </li>
+            <li class="py-2">
+              <a class="text-decoration-underline link-body-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="../index.html#bestSellerSection"><small>BEST SELLER</small></a>
+            </li>
+            <li class="py-2">
+              <a class="text-decoration-underline link-body-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="../index.html#offerSection"><small>OFFER</small></a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <form action="./demo-content.html">
+            <h6 class="fw-bold mb-4">Subscribe to our newsletter</h6>
+            <div class="d-flex flex-sm-row w-100">
+              <label for="newsletter" class="visually-hidden">Email address</label>
+              <input id="newsletter" type="email" class="form-control rounded-0 focus-ring focus-ring-light"
+                placeholder="Email address" required>
+              <button class="btn btn-dark rounded-0 z-3" type="submit">Subscribe</button>
+            </div>
+          </form>
+
+          <div class="mt-3">
+            <h6 class="fw-bold mb-2">
+              Follow us at
+            </h6>
+            <ul class="list-unstyled d-flex">
+              <li class="me-3">
+                <a class="link-body-emphasis" href="https://www.facebook.com/" target="_blank">
+                  <i class="bi bi-facebook fs-4"></i>
+                </a>
+              </li>
+              <li class="me-3">
+                <a class="link-body-emphasis" href="https://www.instagram.com/" target="_blank">
+                  <i class="bi bi-instagram fs-4"></i>
+                </a>
+              </li>
+              <li class="me-3">
+                <a class="link-body-emphasis fs-4" href="https://twitter.com/" target="_blank">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap -->
+  <script src="../assets/js/bootstrap/popper.min.js"></script>
+  <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+
+  <!-- Custom js -->
+  <script src="../js/data.js"></script>
+  <script src="../js/script.js"></script>
+  </script>
+</body>
+
+</html>
