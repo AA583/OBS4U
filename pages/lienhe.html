@@ -1,2 +1,143 @@
-[InternetShortcut]
-URL=https://phuongthao2k2.w3spaces.com/new-file.html
+ <!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #fff2e6;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .breadcrumb {
+            margin-top: 10px;
+            color: #888;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .contact-info, .contact-form, .map {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 10px;
+            flex: 1;
+            min-width: 300px;
+        }
+        .contact-info h2, .contact-form h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .contact-info p, .contact-info li {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        .contact-info ul {
+            list-style: none;
+            padding: 0;
+        }
+        .contact-info li {
+            display: flex;
+            align-items: center;
+        }
+        .contact-info li img {
+            margin-right: 10px;
+        }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form input, .contact-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .contact-form button {
+            padding: 10px;
+            background-color: #ff7043;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #ff5722;
+        }
+        .map iframe {
+            width: 100%;
+            border: 0;
+            border-radius: 10px;
+        }
+        /* Place your CSS styles in this file */
+
+        h1 {
+            text-align: center;
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: normal;
+        }               
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Liên hệ</h1>
+        <div class="breadcrumb">Trang chủ > Liên hệ</div>
+    </header>
+    <div class="container">
+        <div class="contact-info">
+            <h2>Thông tin liên hệ</h2>
+            <ul>
+                <li>
+                    <img src="diachi.jpg" alt="Địa chỉ">
+                    <p>12 Chùa Bộc, Đống Đa, Hà Nội</p>
+                </li>
+                <li>
+                    <img src="dienthoai.jpg" alt="Điện thoại">
+                    <p>  0362705364</p>
+                </li>
+                <li>
+                    <img src="email.jpg" alt="Email">
+                    <p>OBS4U@gmail.com</p>
+                </li>
+            </ul>
+        </div>
+        <div class="contact-form">
+            <h2>Liên hệ với chúng tôi</h2>
+            <form action="submit_contact_form.php" method="post">
+                <input type="text" name="name" placeholder="Họ và tên" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="message" name="message" placeholder="Nội dung" rows="5" required></textarea>
+                <button type="submit">Gửi liên hệ</button>
+            </form>
+        </div>
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.748093143506!2d105.82639801493268!3d21.04300478598833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac7335d9b3c1%3A0x9e5fbc5d66b5861a!2s12%20Ch%C3%B9a%20B%E1%BB%99c%2C%20Quang%20Trung%2C%20%C4%90%E1%BB%91ng%20%C4%90a%2C%20H%C3%A0%20N%E1%BB%99i%2C%20Vietnam!5e0!3m2!1sen!2sus!4v1686918508471!5m2!1sen!2sus"
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</body>
+</html>
