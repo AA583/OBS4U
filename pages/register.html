@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
-  <title>Đăng nhập</title>
+  <title>Đăng ký</title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
@@ -99,7 +99,7 @@
         <nav aria-label="breadcrumb" class="ms-2">
           <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item"><a href="../index.html">Trang chủ</a></li>
-            <li class="breadcrumb-item"><a href="../pages/login.html">Đăng nhập</a></li>
+            <li class="breadcrumb-item">Đăng ký</li>
           </ol>
         </nav>
       </div>
@@ -110,19 +110,23 @@
   <main>
     <div class="d-flex justify-content-center py-5">
       <div class="col-10 col-md-6 col-xl-4">
-        <h2 class="text-center fw-bold mb-5">Đăng nhập</h2>
+        <h2 class="text-center fw-bold">Đăng ký</h2>
         <div id="errorMessage" class="text-danger fw-bold"></div>
-        <form action="../index.html">
+        <form action="./login.html">
           <div class="col-12 form-floating my-3">
             <input type="text" class="form-control" id="usernameInput" placeholder="Username" required>
-            <label for="usernameInput" class="form-label">Tên tài khoản <span class="text-danger">*</span></label>
+            <label for="username" class="form-label">Tên tài khoản <span class="text-danger">*</span></label>
+          </div>
+
+          <div class="col-12 form-floating my-3">
+            <input type="email" class="form-control" id="email" placeholder="Email" required>
+            <label for="email" class="form-label bg-transparent">Email <span class="text-danger">*</span></label>
           </div>
 
           <div class="col-12 form-floating my-3">
             <input type="password" class="form-control" id="password" placeholder="Password" required>
-            <label for="passwordInput" class="form-label">Mật khẩu <span class="text-danger">*</span></label>
+            <label for="password" class="form-label">Mật khẩu <span class="text-danger">*</span></label>
           </div>
-
           <div class="form-check ms-2">
             <input class="form-check-input" type="checkbox" id="showPassword">
             <label class="form-check-label" for="showPassword">
@@ -130,11 +134,18 @@
             </label>
           </div>
 
-          <div class="col-12 my-4">
-            <button class="btn btn-dark w-100" type="submit">Đăng nhập</button>
+          <div class="col-12 form-floating my-3">
+            <input type="password" class="form-control" id="passwordConfirmation" placeholder="Password" required>
+            <label for="passwordConfirmation" class="form-label">Xác nhận mật khẩu <span
+                class="text-danger">*</span></label>
+            <small class="errorMessage text-danger"></small>
           </div>
 
-          <p>Bạn không có tài khoản? <a href="./register.html" class="link-primary">Đăng ký</a></p>
+          <div class="col-12 my-4">
+            <button class="btn btn-dark w-100" type="submit">Đăng ký</button>
+          </div>
+
+          <p>Bạn đã có tài khoản? <a href="./login.html" class="link-primary">Đăng nhập</a></p>
         </form>
 
       </div>
