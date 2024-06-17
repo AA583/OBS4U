@@ -1,5 +1,6 @@
 body {
   background: #F3F2EC;
+  overflow-x: hidden;
 }
 
 .header-font {
@@ -13,4 +14,8 @@ a {
 
 .section-color {
   background: #EDEBE4;
+}
+
+.card-body {
+  min-height: 142px;
 }
