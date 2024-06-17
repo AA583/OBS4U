@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
-  <title>Giới thiệu</title>
+  <title>Đăng nhập</title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
@@ -13,14 +13,13 @@
   <!-- Bootstrap icon -->
   <link rel="stylesheet" href="../assets/css/bootstrap_icons/bootstrap-icons.min.css">
 
-  <!-- Hover.css -->
-  <link rel="stylesheet" href="../assets/css/hover_css/hover-min.css">
-
   <!-- Custom css -->
   <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
+
   <!-- Header -->
   <header>
     <!-- nav 1 -->
@@ -45,9 +44,9 @@
               </span>
             </li>
           </ul>
-          <a href="../pages/login.html" class="btn btn-outline-light d-flex p-0 px-2 py-1">
+          <a href="" class="btn btn-outline-light d-flex p-0 px-2 py-1">
             <i class="bi bi-person-fill"></i>
-            <div><small class="ps-1">Đăng nhập</small></div>
+            <div><small class="ps-1">Đăng ký</small></div>
           </a>
         </div>
       </div>
@@ -94,13 +93,13 @@
         </button>
       </div>
     </nav>
-    <!-- Breadcrumb -->
+    <!-- Breadcum -->
     <div class="bg-white">
       <div class="container-md py-3">
         <nav aria-label="breadcrumb" class="ms-2">
           <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item"><a href="../index.html">Trang chủ</a></li>
-            <li class="breadcrumb-item"><a href="../pages/introductionOurshelf.html">Giới thiệu</a></li>
+            <li class="breadcrumb-item"><a href="../pages/login.html">Đăng nhập</a></li>
           </ol>
         </nav>
       </div>
@@ -109,67 +108,35 @@
 
   <!-- Main content -->
   <main>
-    <div class="container">
-      <div class="about-us">
-        <h1>Về Chúng Tôi</h1>
-        <img src="https://thietkekhainguyen.com/wp-content/uploads/2018/10/sach-anh-du-lich7-788x445.jpg" alt="Ảnh sách"
-          height="200" style="float: right" />
-        <p>
-          Nhà sách Ourbookself là một điểm đến lý tưởng cho những ai đam mê đọc
-          sách và tìm kiếm tri thức. Chúng tôi tự hào mang đến một không gian
-          đọc sách thoải mái, hiện đại và đầy cảm hứng, nơi bạn có thể khám phá
-          hàng ngàn đầu sách từ nhiều thể loại khác nhau.
-        </p>
-        <div class="mission">
-          <h2>Sứ Mệnh</h2>
-          <p>
-            Sứ mệnh của Ourbookself là khơi nguồn cảm hứng và đam mê đọc sách
-            trong cộng đồng. Chúng tôi tin rằng sách là nguồn tri thức vô tận,
-            là cầu nối giữa quá khứ và tương lai, giữa các nền văn hóa và các
-            thế hệ. Vì vậy, chúng tôi không ngừng nỗ lực để mang đến những cuốn
-            sách hay nhất, bổ ích nhất đến tay độc giả.
-          </p>
-        </div>
-        <div class="vision">
-          <h2>Tầm Nhìn</h2>
-          <p>
-            Chúng tôi phấn đấu trở thành nhà sách hàng đầu trong khu vực, nơi
-            khách hàng có thể tìm thấy mọi cuốn sách mà họ mong muốn, đồng thời
-            trở thành địa chỉ tin cậy cho những người yêu sách.
-          </p>
-        </div>
-        <div class="service">
-          <h2>Dịch vụ</h2>
-          <p>Giao hàng tận nơi: Với dịch vụ giao hàng nhanh chóng và tiện lợi,
-            bạn có thể nhận sách ngay tại nhà mình.</p>
-          <p>Đặt hàng trực tuyến: Bạn có thể dễ dàng đặt mua sách qua website của chúng tôi với vài thao tác
-            đơn giản.</p>
-          <p>Thẻ thành viên: Tham gia chương trình thẻ thành viên để
-            nhận được nhiều ưu đãi và khuyến mãi đặc biệt.</p>
-          <p>Tư vấn và hỗ trợ: Đội
-            ngũ nhân viên tận tâm và chuyên nghiệp của chúng tôi luôn sẵn sàng
-            tư vấn và hỗ trợ bạn trong việc chọn sách.</p>
-          </p>
-        </div>
-        <div class="values">
-          <h2>Giá Trị Cốt Lõi</h2>
-          <p>
-            Chất lượng: Chúng tôi cam kết cung cấp những cuốn sách chất lượng
-            nhất.
-          </p>
-          <p>
-            Đa dạng: Đa dạng hóa các thể loại sách để đáp ứng nhu cầu của mọi
-            đối tượng khách hàng.
-          </p>
-          <p>
-            Khách hàng: Luôn đặt khách hàng lên hàng đầu, phục vụ tận tâm và chu
-            đáo.
-          </p>
-          <p>
-            Phát triển bền vững: Xây dựng một môi trường làm việc chuyên nghiệp,
-            bền vững cho nhân viên và cộng đồng.
-          </p>
-        </div>
+    <div class="d-flex justify-content-center py-5">
+      <div class="col-10 col-md-6 col-xl-4">
+        <h2 class="text-center fw-bold mb-5">Đăng nhập</h2>
+        <div id="errorMessage" class="text-danger fw-bold"></div>
+        <form action="../index.html">
+          <div class="col-12 form-floating my-3">
+            <input type="text" class="form-control" id="usernameInput" placeholder="Username" required>
+            <label for="usernameInput" class="form-label">Tên tài khoản <span class="text-danger">*</span></label>
+          </div>
+
+          <div class="col-12 form-floating my-3">
+            <input type="password" class="form-control" id="password" placeholder="Password" required>
+            <label for="passwordInput" class="form-label">Mật khẩu <span class="text-danger">*</span></label>
+          </div>
+
+          <div class="form-check ms-2">
+            <input class="form-check-input" type="checkbox" id="showPassword">
+            <label class="form-check-label" for="showPassword">
+              Hiển mật khẩu
+            </label>
+          </div>
+
+          <div class="col-12 my-4">
+            <button class="btn btn-dark w-100" type="submit">Đăng nhập</button>
+          </div>
+
+          <p>Bạn không có tài khoản? <a href="./register.html" class="link-primary">Đăng ký</a></p>
+        </form>
+
       </div>
     </div>
   </main>
@@ -274,13 +241,8 @@
   </footer>
 
   <!-- Bootstrap -->
-  <script src="../assets/js/bootstrap/popper.min.js"></script>
   <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
 
-  <!-- Custom js -->
-  <script src="../js/data.js"></script>
-  <script src="../js/script.js"></script>
-  </script>
 </body>
 
 </html>
