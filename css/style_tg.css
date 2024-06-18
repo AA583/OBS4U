@@ -14,11 +14,11 @@ h1 {
     padding: 20px;
 }
 
-.author-row {
+/* .author-row {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
-}
+} */
 
 .author {
     flex: 0 0 18%;
