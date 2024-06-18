@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
-  <title>Sản phẩm</title>
+  <title>Sách</title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
@@ -69,13 +69,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-md-0 pb-1 pb-md-0 gap-lg-4">
             <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
-              <a class="nav-link active active-link opacity-75" href="../index.html">Trang chủ</a>
+              <a class="nav-link" href="../index.html">Trang chủ</a>
             </li>
             <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
               <a class="nav-link" href="../pages/introductionOurshelf.html">Giới thiệu</a>
             </li>
             <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
-              <a class="nav-link" href="../pages/giasach.html">Sách</a>
+              <!-- <a class="nav-link active active-link
+              link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="../pages/giasach.html">Sách</a> -->
+              <div class="dropdown">
+                <a class="nav-link active active-link
+                link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="../pages/giasach.html">Sách</a>
+                <div class="dropdown-content">
+                    <a class="a" href="">Sách kỹ năng</a>
+                    <a class="a" href="">Sách tâm lý</a>
+                    <a class="a" href="">Sách văn học</a>
+                    <a class="a" href="">Sách tiểu sử</a>
+                </div>
+            </div>
             </li>
             <li class="nav-item fw-bold ps-2 ps-md-0 py-1 py-md-2">
               <a class="nav-link" href="../pages/tacgia.html">Tác giả</a>
@@ -86,7 +97,7 @@
           </ul>
         </div>
         <button class="btn btn-outline-dark my-1 me-2" type="button">
-          <a href="">
+          <a href="../pages/cart.html">
             <i class="bi-cart-fill me-1"></i>
             Giỏ hàng
             <span id="cartCount" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
@@ -100,7 +111,7 @@
         <nav aria-label="breadcrumb" class="ms-2">
           <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item"><a href="../index.html">Trang chủ</a></li>
-            <li class="breadcrumb-item"><a href="../pages/giasach.html">Sách</a></li>
+            <li class="breadcrumb-item active active text-primary text-opacity-75"><a href="../pages/giasach.html">Sách</a></li>
           </ol>
         </nav>
       </div>
@@ -123,7 +134,7 @@
           <span id="cartCount2"
             class="position-absolute top-0 start-100 mt-1 me-2 translate-middle badge rounded-pill bg-danger">
             1
-            <span class="visually-hidden">number of items in cart</span>
+            <span class="visually-hidden">Số lượng sách trong giỏ</span>
           </span>
         </a>
       </div>
@@ -135,16 +146,16 @@
         <div class="modal-content">
           <div class="modal-header">
             <h1 id="modalTitle" class="modal-title fs-5" id="addBookModalLabel">
-              Successful!
+              Thành công!
             </h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div id="modalBody" class="modal-body">
-            <span class="fw-bold"></span> has been added to your cart!
+            <span class="fw-bold"></span> đã có sản phẩm trong giỏ!
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Continue shopping</button>
-            <a href="./cart.html" class="btn btn-dark">View cart</a>
+            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Tiếp tục mua sắm</button>
+            <a href="./cart.html" class="btn btn-dark">Giỏ hàng</a>
           </div>
         </div>
       </div>
@@ -734,7 +745,7 @@
     </div>
     <!-- Pagination controls -->
     <nav aria-label="Page navigation">
-      <ul class="pagination justify-content-center mt-4 " id="pagination">
+      <ul class="pagination  justify-content-center mt-4 " id="pagination">
       </ul>
     </nav>
   </main>
@@ -817,7 +828,7 @@
             <h6 class="fw-bold mb-2">Theo dõi chúng tôi</h6>
             <ul class="list-unstyled d-flex">
               <li class="me-3">
-                <a class="link-body-emphasis" href="https://www.facebook.com/" target="_blank">
+                <a  class="link-body-emphasis" href="https://www.facebook.com/" target="_blank">
                   <i class="bi bi-facebook fs-4"></i>
                 </a>
               </li>
@@ -850,10 +861,6 @@
 
   <!-- Owl Carousel config -->
   <script src="./js/owl-carousel-config.js"></script>
-
-  <!-- Custom js -->
-  <script src="../js/data.js"></script>
-  <script src="../js/script.js"></script>
 
   <!-- JavaScript -->
   <!-- <script>
@@ -894,12 +901,14 @@
           }
         });
       }
-
-      searchInput.addEventListener('input', filterBooks);
-
-      //searchIcon.addEventListener('click', function () {
-      //  filterBooks();
-      //});
+      searchIcon.addEventListener('click', function () {
+        filterBooks();
+      });
+      searchInput.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+          filterBooks();
+        }
+      });
 
       // Reset to initial state when search input is cleared
       searchInput.addEventListener('input', function (event) {
@@ -911,7 +920,37 @@
         }
       });
     });
+
+    //HIỂN THỊ PHÂN TRANG
     document.addEventListener('DOMContentLoaded', function () {
+      const books = [
+        {
+          id: 0,
+          name: "Tư duy mở",
+          url: "Sách kỹ năng/Tu_duy_mo",
+          author: "Trần Bảo Định",
+          description:
+            `
+    The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it. "To Kill A Mockingbird" became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic.
+    <br><br>
+    Compassionate, dramatic, and deeply moving, "To Kill A Mockingbird" takes readers to the roots of human behavior - to innocence and experience, kindness and cruelty, love and hatred, humor and pathos. Now with over 18 million copies in print and translated into forty languages, this regional story by a young Alabama woman claims universal appeal. Harper Lee always considered her book to be a simple love story. Today it is regarded as a masterpiece of American literature.
+    `,
+          rating: 4,
+          price: 280
+        },
+        {
+          id: 20,
+          name: "Life of Pi",
+          url: "life-of-pi",
+          author: "Yann Martel",
+          description:
+            `
+    Life of Pi is a fantasy adventure novel by Yann Martel published in 2001. The protagonist, Piscine Molitor "Pi" Patel, a Tamil boy from Pondicherry, explores issues of spirituality and practicality from an early age. He survives 227 days after a shipwreck while stranded on a boat in the Pacific Ocean with a Bengal tiger named Richard Parker.
+    `,
+          rating: 4,
+          price: 350
+        }
+      ];
       const itemsPerPage = 8; // 2 rows * 4 items per row
       const bookCards = document.querySelectorAll('#ourshelf .col');
       const paginationContainer = document.getElementById('pagination');
@@ -935,13 +974,17 @@
         for (let i = 1; i <= totalPages; i++) {
           const li = document.createElement('li');
           li.classList.add('page-item');
-          li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+          li.innerHTML = `<a style="margin-right:1px ;" class="page-link" href="#">${i}</a>`;
           li.addEventListener('click', (event) => {
             event.preventDefault();
             currentPage = i;
             displayPage(currentPage);
             updatePagination();
           });
+          const pageLink = li.querySelector('a');
+          pageLink.style.backgroundColor = 'black';
+          pageLink.style.color = 'white'; // Thêm màu chữ trắng
+          pageLink.style.fontWeight = 'bold'; // Thêm in đậm chữ
           paginationContainer.appendChild(li);
         }
         updatePagination();
@@ -961,33 +1004,19 @@
       // Initialize the pagination
       displayPage(currentPage);
       setupPagination();
-
-      // Search functionality
-      const searchInput = document.getElementById('searchInput');
-      const searchIcon = document.getElementById('searchIcon');
-
-      searchIcon.addEventListener('click', function () {
-        const searchText = searchInput.value.toLowerCase();
-        bookCards.forEach(card => {
-          const bookTitle = card.querySelector('.fw-bold').textContent.toLowerCase();
-          if (bookTitle.includes(searchText)) {
-            card.style.display = '';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-        setupPagination();
-        displayPage(1);
-      });
-
-      searchInput.addEventListener('input', function () {
-        if (searchInput.value === '') {
-          displayPage(currentPage);
-          setupPagination();
+      const addBtnList = document.querySelectorAll(".add-button ");
+      addBtnList.forEach(button => {
+        button.onclick = () => {
+          const id = parseInt(button.nextElementSibling.value);
+          handleAddBookEvent(id);
+          document.getElementById("modalBody").firstElementChild.innerText = `"${books[id].name}"`;
         }
       });
     });
   </script>
+  <!-- Custom js -->
+  <!-- <script src="../js/data.js"></script> -->
+  <!-- <script src="../js/script.js"></script> -->
 </body>
 
 </html>
