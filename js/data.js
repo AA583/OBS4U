@@ -3,7 +3,7 @@ let books = [
     id:0,
     name: "Tư duy mở",
     url: "Sách kỹ năng/Tu_duy_mo",
-    author: "Trần Bảo Định",
+    author: "Nguyễn Anh Dũng",
     description:
       `
     `,
