@@ -4,7 +4,7 @@ const checkoutButton = document.getElementById("checkoutButton");
 function initCart() {
   if (cartCount.innerText === "0") {
     let noti = document.createElement("h6");
-    noti.innerText = "Your cart is empty. Return to shop for shopping.";
+    noti.innerText = "Giỏ hàng của bạn trống. Quay lại cửa hàng để lựa chọn sản phẩm";
     cartList.appendChild(noti);
     checkoutButton.classList.add("disabled");
   } else {
@@ -112,7 +112,7 @@ document.querySelectorAll(".remove-button").forEach(e => {
 
     if (cartCount.innerText === "0") {
       let noti = document.createElement("h6");
-      noti.innerText = "Your cart is empty. Return to shop for shopping.";
+      noti.innerText = "Giỏ hàng của bạn trống. Quay lại cửa hàng để lựa chọn sản phẩm.";
       cartList.appendChild(noti);
       checkoutButton.classList.add("disabled");
     }
